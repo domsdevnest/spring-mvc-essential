@@ -3,6 +3,7 @@ package com.domsdevnest.exception;
 import com.domsdevnest.exception.filter.LogFilter;
 import com.domsdevnest.exception.interceptor.LogInterceptor;
 import com.domsdevnest.exception.resolver.MyHandlerExceptionResolver;
+import com.domsdevnest.exception.resolver.UserHandlerExceptionResolver;
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.Filter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -31,6 +32,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void extendHandlerExceptionResolvers(List<HandlerExceptionResolver> resolvers) {
         resolvers.add(new MyHandlerExceptionResolver());
+        resolvers.add(new UserHandlerExceptionResolver());
     }
 
     //    @Bean
