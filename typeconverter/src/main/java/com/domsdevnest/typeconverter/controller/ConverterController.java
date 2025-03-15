@@ -13,7 +13,7 @@ public class ConverterController {
 
     @GetMapping("/converter-view")
     public String converterView(Model model) {
-//        model.addAttribute("number", 1000);
+        model.addAttribute("number", 1000);
         model.addAttribute("ipPort", new IpPort("127.0.0.1", 8080));
         return "converter-view";
     }
